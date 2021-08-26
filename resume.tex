@@ -1,0 +1,151 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+
+% custom parameters
+\newcommand{\gpa}[1]{\textbf{GPA:} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Gregory Litman-Navarro}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{greg-navarro.com/PersonalProfile}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://www.greg-navarro.com/PersonalProfile}
+\newcommand{\yourEmail}{gregorylitmannavarro@gmail.com}
+\newcommand{\yourPhone}{562-896-5425}
+\newcommand{\githubUserName}{greg-navarro}
+
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%      & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Objectives
+%--------------------------------------------------------------
+\section{Objectives}
+ASDFDSA
+\sectionsep
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
+
+% \teacherAssistant{World Wide Web Information Systems Development}
+\courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}\\
+\gpa{3.51}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+
+\resumeHeading{CSULB}{Research Assistant (RA) as Prarie Learn developer}{Long Beach, CA}{May 2021 - Present}
+\begin{bullets}
+    \item Developed a Personal Health Record (PHR) system in \textbf{\href{https://spring.io/}{Spring}} based on the theoretical model outlined in \underlinedLink{https://research.library.mun.ca/11920}{Mitu Kumar's thesis}.
+    
+\end{bullets}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{Calorie Calculator}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
+\begin{bullets}
+    \item A full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calorie's present in a given food item.\\
+\end{bullets}
+\sectionsep
+  
+\projectHeading{The Bouncing Balls Game}{https://codepen.io/gregnavarro/pen/ZELVLmR}{JavaScript, HTML/CSS, jQuery, Animation}
+\begin{bullets}
+    \item An interactive implementation of the classic bouncing balls project wherein simulated physics are applied to rendered shapes to generate an animation.\\  
+    \item By interacting with an HTML canvas users are able to create new 'bouncing balls' and remove existing ones.  Users are also able to adjust such parameters as gravity and friction.\\
+\end{bullets}
+\sectionsep
+
+\projectHeading{P2P LAN File Sharer}{https://github.com/greg-navarro/p2pLANfilesharing}{Python, Object-Oriented Design, Distributed Systems}
+A program that authenticates users based on their typing patterns. And a spoofer that uses the genetic algorithm to mimic the user's typing pattern.
+\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    % \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
+    \singleItem{Languages:}{Python, Node.js, Java, C++}
+    \\
+    \singleItem{Web Development:}{React, JavaScript, Node.js, HTML/CSS}
+    \\
+    \singleItem{Technology:}{Git, Docker, JSON, XML, Apache, MongoDB, MySQL, SQLite}
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
