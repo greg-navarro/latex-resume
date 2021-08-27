@@ -3,11 +3,14 @@
 \pagestyle{fancy}
 \resetHeaderAndFooter
 
+\usepackage{geometry}
+\geometry{margin=0.5in, top=0.55in}
+
 %--------------------------------------------------------------
 % Convenience command - make it easy to fill template
 
 % Vertical spacing between elements
-\newcommand{\verticalspacing}[0]{\vspace{0.45cm}}
+\newcommand{\verticalspacing}[0]{\vspace{0.2cm}}
 
 % Create job position command. Parameters: company, position, location, when
 \newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
@@ -34,7 +37,7 @@
  
 %--------------------------------------------------------------
 \begin{document}
-\vspace{0.2cm}
+
 %--------------------------------------------------------------
 %     Profile
 %--------------------------------------------------------------
@@ -62,6 +65,7 @@
 % \end{tabular*}
 
 \begin{center}
+    \vspace{5cm}
     \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
     \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
     \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
