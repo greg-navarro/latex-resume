@@ -7,6 +7,7 @@
 % Convenience command - make it easy to fill template
 
 % Vertical spacing between elements
+\newcommand{\verticalspacing}[0]{\vspace{0.45cm}}
 
 % Create job position command. Parameters: company, position, location, when
 \newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
@@ -33,7 +34,7 @@
  
 %--------------------------------------------------------------
 \begin{document}
-
+\vspace{0.2cm}
 %--------------------------------------------------------------
 %     Profile
 %--------------------------------------------------------------
@@ -71,13 +72,16 @@
 %     Objectives
 %--------------------------------------------------------------
 \section{Objectives}
+\vspace{0.15cm}
 \ralewayMedium{Pursuing a career in software engineering, where I can utilize critical thinking, teamwork, and technical skills to develop and deliver high quality software.}  
 \sectionsep
+\verticalspacing
 
 %--------------------------------------------------------------
 %     Education
 %--------------------------------------------------------------
 \section{Education}
+\vspace{0.15cm}
 % Put school first and degree second if your school is reputable
 \educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
 
@@ -85,38 +89,38 @@
 \courseWork{Data Structures and Algorithms; Information Security; Statistics; Linear Algebra; Artificial Intelligence; Software Engineering}\\
 \gpa{3.51}
 \sectionsep
-
+\verticalspacing
 %--------------------------------------------------------------
 %     Experience
 %--------------------------------------------------------------
 \section{Work Experience}
-
+\vspace{0.15cm}
 \resumeHeading{CSULB}{Research Assistant (RA) as Prarie Learn developer}{Long Beach, CA}{May 2021 - Present}
 \begin{bullets}
     \item Developed an interactive UML class diagramming system for use in computer based test (CBT) questions using the \textbf{Fabric.js} library.
     \item Wrote a number of original random question generators that test users understanding of software design concepts.
 \end{bullets}
 \sectionsep
-
+\verticalspacing
 
 %--------------------------------------------------------------
 %     Projects
 %--------------------------------------------------------------
 \section{Projects}
-
+\vspace{0.15cm}
 \projectHeading{Calorie Calculator}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
 \begin{bullets}
     \item A full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calorie's present in a given food item.\\
 \end{bullets}
 \sectionsep
-  
+\vspace{0.15cm}  
 \projectHeading{The Bouncing Balls Game}{https://codepen.io/gregnavarro/pen/ZELVLmR}{JavaScript, HTML/CSS, jQuery, Animation}
 \begin{bullets}
     \item An interactive implementation of the classic bouncing balls project wherein simulated physics are applied to rendered shapes to generate an animation.\\  
     \item By interacting with an HTML canvas users are able to create new 'bouncing balls' and remove existing ones.  Users are also able to adjust such parameters as gravity and friction.\\
 \end{bullets}
 \sectionsep
-
+\vspace{0.15cm}
 \projectHeading{P2P LAN File Sharer}{https://github.com/greg-navarro/p2pLANfilesharing}{Python, Object-Oriented Design, Distributed Systems}
 \begin{bullets}
     \item This program is an automated peer-to-peer file sharing service designed to automatically pair with peers discovered on a LAN network and unify the contents in a specified portion of the host's file-system.\\
@@ -130,12 +134,14 @@
     % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
 % \end{bullets}
 % \sectionsep
-  
+
+\verticalspacing  
 
 %--------------------------------------------------------------
 %     Skills
 %--------------------------------------------------------------
 \section{Skills}
+\vspace{0.15cm}
 \begin{skillList}
     % \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
     \singleItem{Languages:}{Python, Node.js, Java, C++, SQL}
