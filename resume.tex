@@ -43,9 +43,9 @@
 %--------------------------------------------------------------
 \newcommand{\yourName}{Gregory Litman-Navarro}
 % How you want it to show up on the resume
-\newcommand{\yourWebsite}{greg-navarro.com/PersonalProfile}
+\newcommand{\yourWebsite}{http://gregnavarro.com}
 % vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
-\newcommand{\yourWebsiteLink}{https://www.greg-navarro.com/PersonalProfile}
+\newcommand{\yourWebsiteLink}{http://www.gregnavarro.com}
 \newcommand{\yourEmail}{gregorylitmannavarro@gmail.com}
 \newcommand{\yourPhone}{562-896-5425}
 \newcommand{\githubUserName}{greg-navarro}
@@ -75,11 +75,11 @@
 %--------------------------------------------------------------
 %     Objectives
 %--------------------------------------------------------------
-\section{Objectives}
-\vspace{0.15cm}
-\latoLight{\large Pursuing a career in software engineering, where I can utilize critical thinking, teamwork, and technical skills to develop and deliver high quality software.}  
-\sectionsep
-\verticalspacing
+% \section{Objectives}
+% \vspace{0.15cm}
+% \latoLight{\large Pursuing a career in software engineering, where I can utilize critical thinking, teamwork, and technical skills to develop and deliver high quality software.}  
+% \sectionsep
+% \verticalspacing
 
 %--------------------------------------------------------------
 %     Education
@@ -89,7 +89,7 @@
 % Put school first and degree second if your school is reputable
 \educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
 
-% \teacherAssistant{World Wide Web Information Systems Development}
+\teacherAssistant{Database Design Fundamentals}\\
 \courseWork{Data Structures and Algorithms; Information Security; Statistics; Linear Algebra; Artificial Intelligence; Software Engineering}\\
 \gpa{3.51}
 \sectionsep
@@ -99,7 +99,7 @@
 %--------------------------------------------------------------
 \section{Work Experience}
 \vspace{0.15cm}
-\resumeHeading{CSULB}{Research Assistant (RA) as Prarie Learn developer}{Long Beach, CA}{May 2021 - Present}
+\resumeHeading{CSULB}{Research Assistant (RA) as Prairie Learn developer}{Long Beach, CA}{May 2021 - Dec 2021}
 \begin{bullets}
     \item Developed an interactive UML class diagramming system for use in computer based test (CBT) questions using the \textbf{Fabric.js} library.
     \item Wrote a number of original random question generators that test users understanding of software design concepts.
@@ -112,23 +112,36 @@
 %--------------------------------------------------------------
 \section{Projects}
 \vspace{0.15cm}
-\projectHeading{Calorie Calculator}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
+\projectHeading{Sleep Sounds Generator}{https://61e74b64f68a00007c3ce033--musing-meitner-6c7665.netlify.app}{JavaScript, React}
 \begin{bullets}
-    \item A full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calorie's present in a given food item.\\
+    \item A browser based sound generator with a bank of soothing sounds that can be combined and mixed to the user's preferences.\\
 \end{bullets}
 \sectionsep
 \vspace{0.15cm}  
-\projectHeading{The Bouncing Balls Game}{https://codepen.io/gregnavarro/pen/ZELVLmR}{JavaScript, HTML/CSS, jQuery, Animation}
+\projectHeading{VR Aim Trainer}{https://above-reality.itch.io/vr-aim-trainer}{C\#, Unity, SteamVR, Oculus}
 \begin{bullets}
-    \item An interactive implementation of the classic bouncing balls project wherein simulated physics are applied to rendered shapes to generate an animation.\\  
-    \item By interacting with an HTML canvas users are able to create new 'bouncing balls' and remove existing ones.  Users are also able to adjust such parameters as gravity and friction.\\
+    \item A virtual reality game consisting of a series of challenges designed to improve a players accuracy, speed and reaction time. \\
+    \item Compatible with Oculus headsets.
 \end{bullets}
 \sectionsep
-\vspace{0.15cm}
+\vspace{0.15cm}  
+% \projectHeading{The Bouncing Balls Game}{https://codepen.io/gregnavarro/pen/ZELVLmR}{JavaScript, HTML/CSS, jQuery, Animation}
+% \begin{bullets}
+%     \item An interactive implementation of the classic bouncing balls project wherein simulated physics are applied to rendered shapes to generate an animation.\\  
+%     \item By interacting with an HTML canvas users are able to create new 'bouncing balls' and remove existing ones.  Users are also able to adjust such parameters as gravity and friction.\\
+% \end{bullets}
+% \sectionsep
+% \vspace{0.15cm}
 \projectHeading{P2P LAN File Sharer}{https://github.com/greg-navarro/p2pLANfilesharing}{Python, Object-Oriented Design, Distributed Systems}
 \begin{bullets}
     \item This program is an automated peer-to-peer file sharing service designed to automatically connect peers discovered on a LAN network and unify the contents of a specified portion of their file-system.\\
     \item Peers are multi-threaded and file requests are performed asynchronously.
+\end{bullets}
+\sectionsep
+\vspace{0.15cm} 
+\projectHeading{Calorie Calculator}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
+\begin{bullets}
+    \item A full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calorie's present in a given food item.\\
 \end{bullets}
 \sectionsep
 
@@ -148,15 +161,15 @@
 \vspace{0.15cm}
 \begin{skillList}
     % \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
-    \singleItem{Languages:}{Python, Node.js, Java, C++, SQL}
+    \singleItem{Languages:}{JavaScript, Java, Python, SQL}
     \\
-    \singleItem{Web Development:}{React, JavaScript, Node.js, HTML/CSS, JSON, XML}
+    \singleItem{Web Development:}{React, Node.js, HTML/CSS, JSON, XML}
     \\
     \singleItem{Version Control:}{Git}
     \\
-    \singleItem{Technology:}{AWS (S3 \& EC2), Docker, Apache, MongoDB, MySQL, SQLite}
+    \singleItem{Technology:}{Docker, MongoDB, SQL, MySQL}
     \\
-    \singleItem{Methodologies:}{Agile, Continuous Integration (CI), Test Driven Development (TDD)}
+    \singleItem{Methodologies:}{Continuous Integration (CI)}
 \end{skillList}
 
 % A more concise alternate 
@@ -165,6 +178,6 @@
 %     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
 %     \\
 %     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
-%     {Technology:}{Git, Docker, \LaTeX}%
+%     {Technology:}{Git, Docker, AWS (S3 \& EC2), Apache,  SQLite, \LaTeX, Agile, }%
 % \end{skillList}
 \end{document}
