@@ -33,7 +33,7 @@
 \newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
 
 % GPA
-\newcommand{\gpa}[1]{\textbf{GPA:} #1}
+\newcommand{\gpa}[1]{\textbf{In-Major GPA:} #1}
  
 %--------------------------------------------------------------
 \begin{document}
@@ -65,7 +65,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \vspace{5cm}
+    % \vspace{5cm}
     \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
     \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
     \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
@@ -73,19 +73,10 @@
 \end{center}
 
 %--------------------------------------------------------------
-%     Objectives
-%--------------------------------------------------------------
-% \section{Objectives}
-% \vspace{0.15cm}
-% \latoLight{\large Pursuing a career in software engineering, where I can utilize critical thinking, teamwork, and technical skills to develop and deliver high quality software.}  
-% \sectionsep
-% \verticalspacing
-
-%--------------------------------------------------------------
 %     Education
 %--------------------------------------------------------------
 \section{Education}
-\vspace{0.15cm}
+% \vspace{0.15cm}
 % Put school first and degree second if your school is reputable
 \educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
 
@@ -93,57 +84,53 @@
 \courseWork{Data Structures and Algorithms; Information Security; Statistics; Linear Algebra; Artificial Intelligence; Software Engineering}\\
 \gpa{3.51}
 \sectionsep
-\verticalspacing
+% \verticalspacing
 %--------------------------------------------------------------
 %     Experience
 %--------------------------------------------------------------
 \section{Work Experience}
-\vspace{0.15cm}
+% \vspace{0.15cm}
 \resumeHeading{CSULB}{Research Assistant (RA) as Prairie Learn developer}{Long Beach, CA}{May 2021 - Dec 2021}
 \begin{bullets}
     \item Developed an interactive UML class diagramming system for use in computer based test (CBT) questions using the Fabric.js library.
     \item Implemented an automated relation line drawing tool to render UML \& RE diagrams by employing a variation of the A* algorithm, with some additional heuristics applied to increase legibility.
     \item Improved responsive design by reducing answer option form areas by up to 50\% on browser resize by utilizing the CSS grid layout, modifying existing rule sets, and increasing general interactivity.
 \end{bullets}
+\vspace{0.1cm}
 \textbf{Technologies used:} JavaScript, Python, Node.js, Express, Docker, Git,  HTML/CSS, jQuery
 \sectionsep
-\verticalspacing
+% \verticalspacing
 
 %--------------------------------------------------------------
 %     Projects
 %--------------------------------------------------------------
 \section{Projects}
-\vspace{0.15cm}
-\projectHeading{Sleep Sounds Generator}{https://61e74b64f68a00007c3ce033--musing-meitner-6c7665.netlify.app}{JavaScript, React}
+% \vspace{0.15cm}
+\projectHeading{Sleep Sounds Generator Web App}{https://61e74b64f68a00007c3ce033--musing-meitner-6c7665.netlify.app}{JavaScript, React}
 \begin{bullets}
-    \item A browser based sound generator with a bank of soothing sounds that can be combined and mixed to the user's preferences.\\
+    \item Designed and implemented an in-browser sound generator in React.js that allows the user to combine and mix a variety of soothing sounds.\\
+    \item Refactored component tree to correctly distribute state, allowing for a seamless user experience, through the effective use of hooks, state, and context.\\
 \end{bullets}
 \sectionsep
-\vspace{0.15cm}  
+% \vspace{0.15cm}  
 \projectHeading{VR Aim Trainer}{https://above-reality.itch.io/vr-aim-trainer}{C\#, Unity, SteamVR, Oculus}
 \begin{bullets}
-    \item A virtual reality game consisting of a series of challenges designed to improve a players accuracy, speed and reaction time. \\
-    \item Compatible with Oculus headsets.
+    \item Contributed to the development of a virtual reality game consisting of a series of challenges designed to improve a players accuracy, speed and reaction time. \\
+    \item Incorporated a feature that uses recorded scores and accuracy ratios to generate graphs that summarize the player’s in-game progress.
 \end{bullets}
 \sectionsep
-\vspace{0.15cm}  
-% \projectHeading{The Bouncing Balls Game}{https://codepen.io/gregnavarro/pen/ZELVLmR}{JavaScript, HTML/CSS, jQuery, Animation}
-% \begin{bullets}
-%     \item An interactive implementation of the classic bouncing balls project wherein simulated physics are applied to rendered shapes to generate an animation.\\  
-%     \item By interacting with an HTML canvas users are able to create new 'bouncing balls' and remove existing ones.  Users are also able to adjust such parameters as gravity and friction.\\
-% \end{bullets}
-% \sectionsep
-% \vspace{0.15cm}
+% \vspace{0.15cm}  
+
 \projectHeading{P2P LAN File Sharer}{https://github.com/greg-navarro/p2pLANfilesharing}{Python, Object-Oriented Design, Distributed Systems}
 \begin{bullets}
-    \item This program is an automated peer-to-peer file sharing service designed to automatically connect peers discovered on a LAN network and unify the contents of a specified portion of their file-system.\\
+    \item Designed and implemented an automated peer-to-peer file sharing service that automatically connects peers discovered on a LAN network and continuously unifies the contents of a specified portion of their file-systems.\\
     \item Peers are multi-threaded and file requests are performed asynchronously.
 \end{bullets}
 \sectionsep
-\vspace{0.15cm} 
-\projectHeading{Calorie Calculator}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
+% \vspace{0.15cm} 
+\projectHeading{Meal Planner Web App}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
 \begin{bullets}
-    \item A full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calorie's present in a given food item.\\
+    \item Created a full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calories present in a given food item.\\
 \end{bullets}
 \sectionsep
 
@@ -154,22 +141,22 @@
 % \end{bullets}
 % \sectionsep
 
-\verticalspacing  
+% \verticalspacing  
 
 %--------------------------------------------------------------
 %     Skills
 %--------------------------------------------------------------
 \section{Skills}
-\vspace{0.15cm}
+% \vspace{0.15cm}
 \begin{skillList}
     % \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
     \singleItem{Languages:}{JavaScript, Java, Python, SQL}
     \\
-    \singleItem{Web Development:}{React, Node.js, HTML/CSS, JSON, XML, Selenium}
+    \singleItem{Web Development:}{HTML, CSS, React, Node.js, JSON, XML}
     \\
     \singleItem{Version Control:}{Git}
     \\
-    \singleItem{Technology:}{Docker, MongoDB, SQL, MySQL}
+    \singleItem{Technology:}{Docker, MongoDB, MySQL}
     \\
     \singleItem{Methodologies:}{Continuous Integration (CI)}
 \end{skillList}
@@ -180,6 +167,6 @@
 %     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
 %     \\
 %     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
-%     {Technology:}{Git, Docker, AWS (S3 \& EC2), Apache,  SQLite, \LaTeX, Agile, }%
+%     {Technology:}{Git, Docker, AWS (S3 \& EC2), Apache,  SQLite, \LaTeX, Agile }%
 % \end{skillList}
 \end{document}
