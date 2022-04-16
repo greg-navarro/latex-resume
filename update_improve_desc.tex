@@ -1,8 +1,9 @@
+% \documentclass[]{article}
 \documentclass[]{resume-openfont}
 
 \pagestyle{fancy}
 \resetHeaderAndFooter
-
+\usepackage{xcolor}
 \usepackage{geometry}
 \geometry{margin=0.5in, top=0.55in}
 
@@ -90,7 +91,7 @@
 %--------------------------------------------------------------
 \section{Work Experience}
 % \vspace{0.15cm}
-\resumeHeading{CSULB}{Research Assistant (RA) as Prairie Learn developer}{Long Beach, CA}{May 2021 - Dec 2021}
+\resumeHeading{CSULB}{Research Assistant (RA) as Prairie Learn developer}{Long Beach, CA}{May 2021 - Jan 2022}
 \begin{bullets}
     \item Developed an interactive UML class diagramming system for use in computer based test (CBT) questions using the Fabric.js library.
     \item Implemented an automated relation line drawing tool to render UML \& RE diagrams by employing a variation of the A* algorithm, with some additional heuristics applied to increase legibility.
@@ -106,7 +107,7 @@
 %--------------------------------------------------------------
 \section{Projects}
 % \vspace{0.15cm}
-\projectHeading{Sleep Sounds Generator Web App}{https://61e74b64f68a00007c3ce033--musing-meitner-6c7665.netlify.app}{JavaScript, React}
+\projectHeading{Sleep Sounds Generator Web App}{https://61e74b64f68a00007c3ce033--musing-meitner-6c7665.netlify.app}{JavaScript, React, Sass}
 \begin{bullets}
     \item Designed and implemented an in-browser sound generator in React.js that allows the user to combine and mix a variety of soothing sounds.\\
     \item Refactored component tree to correctly distribute state, allowing for a seamless user experience, through the effective use of hooks, state, and context.\\
@@ -128,9 +129,9 @@
 \end{bullets}
 \sectionsep
 % \vspace{0.15cm} 
-\projectHeading{Meal Planner Web App}{https://caloriecountable.net/}{React, Node.js, Express, MongoDB}
+\projectHeading{Crime Report Heat Map}{}{React, Google Maps, HeatMap.js, REST}
 \begin{bullets}
-    \item Created a full-stack web application that enables users to track their daily calorie intake through a convenient and easy to use interface.  Users can build a database of foods they often consume and quickly estimate the calories present in a given food item.\\
+    \item \\
 \end{bullets}
 \sectionsep
 
@@ -147,26 +148,27 @@
 %     Skills
 %--------------------------------------------------------------
 \section{Skills}
-% \vspace{0.15cm}
-\begin{skillList}
-    % \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
-    \singleItem{Languages:}{JavaScript, Java, Python, SQL}
-    \\
-    \singleItem{Web Development:}{HTML, CSS, React, Node.js, JSON, XML}
-    \\
-    \singleItem{Version Control:}{Git}
-    \\
-    \singleItem{Technology:}{Docker, MongoDB, MySQL}
-    \\
-    \singleItem{Methodologies:}{Continuous Integration (CI)}
-\end{skillList}
+% \begin{skillList}
+%     \singleItem{Languages:}{JavaScript, Java, Python, SQL}
+%     \\
+%     \singleItem{Web Development:}{HTML, CSS, SASS, React, Node.js, JSON, XML}
+%     \\
+%     \singleItem{Version Control:}{Git}
+%     \\
+%     \singleItem{Technology:}{Docker, MongoDB, MySQL}
+%     \\
+%     \singleItem{Methodologies:}{Continuous Integration (CI) }
+% \end{skillList}
+% \color{blue}{agile backend api}
 
 % A more concise alternate 
-% \begin{skillList}
-%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
-%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
-%     \\
-%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
-%     {Technology:}{Git, Docker, AWS (S3 \& EC2), Apache,  SQLite, \LaTeX, Agile }%
-% \end{skillList}
+\begin{skillList}
+    \doubleItem
+    {Languages:}{JavaScript, Java, Python, SQL}
+    {Databases:}{SQL, MongoDB, SQLite}
+    \\
+    \doubleItem
+    {Web Development:}{HTML, CSS, SASS, React, Node.js, JSON, XML}
+    {Technology:}{Git, Docker, \LaTeX}
+\end{skillList}
 \end{document}
