@@ -1,0 +1,174 @@
+% \documentclass[]{article}
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+\usepackage{xcolor}
+\usepackage{geometry}
+\geometry{margin=0.5in, top=0.55in}
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Vertical spacing between elements
+\newcommand{\verticalspacing}[0]{\vspace{0.2cm}}
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+
+% GPA
+\newcommand{\gpa}[1]{\textbf{In-Major GPA:} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Gregory Litman-Navarro}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{http://gregnavarro.com}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{http://www.gregnavarro.com}
+\newcommand{\yourEmail}{gregorylitmannavarro@gmail.com}
+\newcommand{\yourPhone}{562-896-5425}
+\newcommand{\githubUserName}{greg-navarro}
+
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%      & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    % \vspace{5cm}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% \vspace{0.15cm}
+% Put school first and degree second if your school is reputable
+\educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
+
+\teacherAssistant{Database Design Fundamentals}\\
+\courseWork{Data Structures and Algorithms; Information Security; Statistics; Linear Algebra; Artificial Intelligence; Software Engineering}\\
+\gpa{3.51}
+\sectionsep
+% \verticalspacing
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+% \vspace{0.15cm}
+\resumeHeading{CSULB}{Research Assistant (RA) as Prairie Learn developer}{Long Beach, CA}{May 2021 - Jan 2022}
+\begin{bullets}
+    \item Developed an interactive UML class diagramming system for use in computer based test (CBT) questions using the Fabric.js library.
+    \item Implemented an automated relation line drawing tool to render UML \& RE diagrams by employing a variation of the A* algorithm, with some additional heuristics applied to increase legibility.
+    \item Improved responsive design by reducing answer option form areas by up to 50\% on browser resize by utilizing the CSS grid layout, modifying existing rule sets, and increasing general interactivity.
+\end{bullets}
+\vspace{0.1cm}
+\textbf{Technologies used:} JavaScript, Python, Node.js, Express, Docker, Git,  HTML/CSS, jQuery
+\sectionsep
+% \verticalspacing
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+% \vspace{0.15cm}
+\projectHeading{Sleep Sounds Generator Web App}{https://61e74b64f68a00007c3ce033--musing-meitner-6c7665.netlify.app}{JavaScript, React, Sass}
+\begin{bullets}
+    \item Designed and implemented an in-browser sound generator in React.js that allows the user to combine and mix a variety of soothing sounds.\\
+    \item Refactored component tree to correctly distribute state, allowing for a seamless user experience, through the effective use of hooks, state, and context.\\
+\end{bullets}
+\sectionsep
+% \vspace{0.15cm}  
+\projectHeading{VR Aim Trainer}{https://above-reality.itch.io/vr-aim-trainer}{C\#, Unity, SteamVR, Oculus}
+\begin{bullets}
+    \item Contributed to the development of a virtual reality game consisting of a series of challenges designed to improve a players accuracy, speed and reaction time. \\
+    \item Incorporated a feature that uses recorded scores and accuracy ratios to generate graphs that summarize the player’s in-game progress.
+\end{bullets}
+\sectionsep
+% \vspace{0.15cm}  
+
+\projectHeading{P2P LAN File Sharer}{https://github.com/greg-navarro/p2pLANfilesharing}{Python, Object-Oriented Design, Distributed Systems}
+\begin{bullets}
+    \item Designed and implemented an automated peer-to-peer file sharing service that automatically connects peers discovered on a LAN network and continuously unifies the contents of a specified portion of their file-systems.\\
+    \item Peers are multi-threaded and file requests are performed asynchronously.
+\end{bullets}
+\sectionsep
+% \vspace{0.15cm} 
+\projectHeading{Crime Report Heat Map}{}{React, Google Maps, HeatMap.js, SoQL, REST}
+\begin{bullets}
+    \item Created client-side web application that uses public crime report data to generate a spatial heat map.  Provides users with a React interface to query particular keywords and locations, or to filter on date and time. \\
+\end{bullets}
+\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+
+% \verticalspacing  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+% \begin{skillList}
+%     \singleItem{Languages:}{JavaScript, Java, Python, SQL}
+%     \\
+%     \singleItem{Web Development:}{HTML, CSS, SASS, React, Node.js, JSON, XML}
+%     \\
+%     \singleItem{Version Control:}{Git}
+%     \\
+%     \singleItem{Technology:}{Docker, MongoDB, MySQL}
+%     \\
+%     \singleItem{Methodologies:}{Continuous Integration (CI) }
+% \end{skillList}
+% \color{blue}{agile backend api}
+
+% A more concise alternate 
+\begin{skillList}
+    \doubleItem
+    {Languages:}{JavaScript, Java, Python}
+    {Databases:}{SQL, MongoDB, SQLite}
+    \\
+    \doubleItem
+    {Web Development:}{HTML, CSS, SASS, React, Node.js, JSON, XML}
+    {Technology:}{Git, Docker, \LaTeX}
+\end{skillList}
+\end{document}
