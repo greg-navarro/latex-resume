@@ -5,7 +5,7 @@
 \resetHeaderAndFooter
 \usepackage{xcolor}
 \usepackage{geometry}
-\geometry{margin=0.5in, top=0.55in}
+\geometry{margin=0.5in, top=0.35in}
 
 %--------------------------------------------------------------
 % Convenience command - make it easy to fill template
@@ -106,10 +106,11 @@
 %     Projects
 %--------------------------------------------------------------
 \section{Projects}
-\projectHeading{Crime Report Heat Map}{}{React, Google Maps, SoQL, Babel-CLI, REST}
+\projectHeading{Crime Report Heat Map}{}{React, Google Maps, REST, IndexedDB}
 \begin{bullets}
-    \item Created client-side web application that utilizes asynchronous calls to a RESTful API in order to obtain data for drawing a heatmap of reported crime incidents in the city of Los Angeles. \\
-    \item Integrated a React interface into the app that provides fields for key word search and a number of other criteria that can be used to narrow the dataset. This information is used to construct a SoQL query that is dispatched to the API endpoint.\\
+    \item Created a tool to visually plot reported instances of crime over an interactive map. \\
+    \item Provides user with a React interface to query data gathered from RESTful APIs, results are then rendered as a heatmap layer. \\
+    \item Optimized page load time by an average of 61\% by implementing client side data storage and retrieval with indexedDB.\\
 \end{bullets}
 \sectionsep
 % \vspace{0.15cm}
@@ -151,15 +152,13 @@
 %--------------------------------------------------------------
 \section{Skills}
 % \begin{skillList}
-%     \singleItem{Languages:}{JavaScript, Java, Python, SQL}
+%     \singleItem{Languages:}{JavaScript, Java, Python}
 %     \\
-%     \singleItem{Web Development:}{HTML, CSS, SASS, React, Node.js, JSON, XML}
+%     \singleItem{Web Development:}{HTML, CSS, SASS, React, Node.js, Webpack/Babel}
 %     \\
-%     \singleItem{Version Control:}{Git}
+%     \singleItem{Databases:}{SQL, SQLite, MongoDB, NoSQL, SoQL, IndexedDB}
 %     \\
-%     \singleItem{Technology:}{Docker, MongoDB, MySQL}
-%     \\
-%     \singleItem{Methodologies:}{Continuous Integration (CI) }
+%     \singleItem{Technology:}{Git, Docker, JSON, XML} 
 % \end{skillList}
 % \color{blue}{agile backend api}
 
@@ -167,10 +166,10 @@
 \begin{skillList}
     \doubleItem
     {Languages:}{JavaScript, Java, Python}
-    {Databases:}{SQL, MongoDB, SQLite}
+    {Web Development:}{HTML, CSS, SASS, React, Node.js}
     \\
     \doubleItem
-    {Web Development:}{HTML, CSS, SASS, React, Node.js, JSON, XML}
-    {Technology:}{Git, Docker, \LaTeX}
+    {Databases:}{SQL, SQLite, MongoDB, NoSQL, SoQL, IndexedDB}
+    {Technology:}{Git, Docker, JSON, XML, Webpack, Babel}
 \end{skillList}
 \end{document}
