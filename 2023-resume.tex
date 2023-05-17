@@ -1,10 +1,11 @@
+% \documentclass[]{article}
 \documentclass[]{resume-openfont}
 
 \pagestyle{fancy}
 \resetHeaderAndFooter
-
+\usepackage{xcolor}
 \usepackage{geometry}
-\geometry{margin=0.5in, top=0.7in}
+\geometry{margin=0.5in, top=0.5in}
 
 %--------------------------------------------------------------
 % Convenience command - make it easy to fill template
@@ -13,7 +14,7 @@
 \newcommand{\verticalspacing}[0]{\vspace{0.2cm}}
 
 % Create job position command. Parameters: company, position, location, when
-\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#2}}\hfill\location{#3 | #4}\fakeNewLine\descript{#1}\verticalspacing\vspace{0.15cm}}
 
 % Create education heading. Parameters: Name, degree, location, when
 \newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
@@ -33,10 +34,7 @@
 \newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
 
 % GPA
-\newcommand{\gpa}[1]{\textbf{GPA:} #1}
-
-% % Awards & Honors
-\newcommand{\awardsandhonors}[1]{\textbf{Awards and honors:} #1}
+\newcommand{\gpa}[1]{\textbf{In-Major GPA:} #1}
  
 %--------------------------------------------------------------
 \begin{document}
@@ -48,7 +46,7 @@
 % How you want it to show up on the resume
 \newcommand{\yourWebsite}{gregnavarro.com}
 % vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
-\newcommand{\yourWebsiteLink}{http://www.gregnavarro.com/}
+\newcommand{\yourWebsiteLink}{http://www.gregnavarro.com}
 \newcommand{\yourEmail}{gregorylitmannavarro@gmail.com}
 \newcommand{\yourPhone}{562-896-5425}
 \newcommand{\githubUserName}{greg-navarro}
@@ -68,78 +66,113 @@
 % \end{tabular*}
 
 \begin{center}
-    \vspace{5cm}
-    \Huge \scshape \latoRegular{\yourName} \\ \vspace{2pt}
+    % \vspace{5cm}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
     \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
     \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
     $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
 \end{center}
-\vspace{0.2cm}
-\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
 %--------------------------------------------------------------
-%     Objectives
+%     Education
 %--------------------------------------------------------------
-\vspace{0.4cm}
-\section{Objectives}
-\vspace{0.3cm}
-\latoLight{\large Pursuing a part-time position in the retail or service sectors.}  
+\section{Education}
+% \vspace{0.15cm}
+% Put school first and degree second if your school is reputable
+\educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
+
+\teacherAssistant{Database Design Fundamentals}\\
+\courseWork{Data Structures and Algorithms; Information Security; Statistics; Linear Algebra; Artificial Intelligence; Software Engineering}\\
+\gpa{3.51}
 \sectionsep
 % \verticalspacing
 %--------------------------------------------------------------
 %     Experience
 %--------------------------------------------------------------
-\vspace{0.5cm}
-\section{Work Experience}
-\vspace{0.3cm}
-\resumeHeading{CSULB}{Instructional Student Assistant}{Long Beach, CA}{September 2021 - Present}
+\section{Experience}
+\resumeHeading{Futronics Corporation (NA)}{Software Engineer, Intern}{Pasadena, CA}{Jan 2023}
 \begin{bullets}
-    \item Grade homework and projects for students enrolled in the Database Fundamentals course.
-    \item Respond to student inquiries and provide assistance with course material.
+    \item Responsible for developing GUIs for robotic rehabilitation devices in TRL 6.  Collaborated with designers and clinicians to ensure products improved patient outcomes and reduced overall therapy time.
+    \item Authored software module to bridge DDS and HTTP communications, enabling integration of ROS2 systems. 
+    \item Reduced overall load times for rehab devices by 8\%  by implementing a download manager to perform caching and predictive fetching. 
 \end{bullets}
+\vspace{0.1cm}
+\textbf{Technologies used:} React, ROS, Docker, Redux, MQTT, GraphQL, AWS 
+\sectionsep
+\vspace{0.1cm}
 
-\vspace{0.5cm}
-\resumeHeading{CSULB Research Foundation}{Research Assistant}{Long Beach, CA}{May 2021 - Present}
+% \vspace{0.15cm}
+\resumeHeading{CSULB Research Foundation}{Research Assistant as Software Developer}{Long Beach, CA}{May 2021 - Jan 2022}
 \begin{bullets}
-    \item Developed an interactive UML class diagramming system for use in computer based test (CBT) questions using the \textbf{Fabric.js} library.
-    \item Wrote a number of original random question generators that test users understanding of software design concepts.
+    \item  Developed an interactive UML class diagramming system for use in computer based test (CBT) questions.
+    \item Improved responsive design by reducing answer option form areas by up to 43\% on browser resize by utilizing the CSS grid layout, modifying existing rule sets, and increasing general interactivity.
+    \item Responsibilities include project management and both front-end and server-side development.
 \end{bullets}
-
-\vspace{0.5cm}
-\resumeHeading{Cypress College}{Calculus Tutor}{Cypress, CA}{Jan 2018 – June 2019}
-\begin{bullets}
-    \item Assisted students with Calculus I and Calculus II coursework. 
-\end{bullets}
-
-\vspace{0.5cm}
-\resumeHeading{Rubio's Grill}{Cook}{Seal Beach, CA}{Feb 2016 – June 2017}
-\begin{bullets}
-    \item Fulfill orders utilizing best practices to maximize efficiency and quality.
-    \item Wash, dry, and store dishes and utensils for dining room and kitchen. Ensure cleanliness of back-of-house areas at all times.
-\end{bullets}
+\vspace{0.1cm}
+\textbf{Technologies used:} JavaScript, Python, Node.js, Express, Docker, Git,  HTML/CSS, jQuery, Bootstrap
 \sectionsep
 % \verticalspacing
 
 %--------------------------------------------------------------
-%     Education
+%     Projects
 %--------------------------------------------------------------
-\vspace{0.5cm}
-\section{Education}
-\vspace{0.3cm}
-% Put school first and degree second if your school is reputable
-\educationHeading{Bachelor of Science in Computer Science}{California State University Long Beach}{Long Beach, CA}{Dec 2021}
+\section{Projects}
 
-% \teacherAssistant{World Wide Web Information Systems Development}
-\gpa{3.51}\\
-% \textbf{Awards and honors: President's Honor Roll (2020/2021)}
-\awardsandhonors{President's Honor Roll (2020/2021)}
-
-\vspace{0.5cm}
-% Put school first and degree second if your school is reputable
-\educationHeading{Associate in Science in Computer Programming}{Cypress College}{Cypress, CA}{June 2019}
-
-% \teacherAssistant{World Wide Web Information Systems Development}
-\gpa{3.7}
+% \vspace{0.15cm}  
+\projectHeading{Virtual Reality Aim Trainer}{https://www.gregnavarro.com/software-engineering/vr-aim-trainer/}{C\#, Unity, SteamVR, Oculus}
+\begin{bullets}
+    \item Led a small team developing an immersive virtual reality FPS designed to progressively guide players to improve their accuracy, speed and reaction time. \\
+    \item Performed 3D asset integration & scripting to produce responsive animations that accurately simulate user-object interactions across a range of CPU/GPU capabilities.
+\end{bullets}
 \sectionsep
-\verticalspacing
+\vspace{0.15cm}  
 
+\projectHeading{Peer-to-peer LAN File Sharer}{https://www.gregnavarro.com/software-engineering/p2p-file-sharer/}{Python, Object-Oriented Design, Distributed Systems}
+\begin{bullets}
+    \item Designed and implemented a multi-threaded peer-to-peer file sharing service that automatically connects hosts discovered on a LAN network and continuously unifies the contents of a specified portion of their file-systems.\\
+    \item Decreased batch download times by 9.5\% through integration of non-blocking socket communication scheme using Linux file descriptors.
+\end{bullets}
+\sectionsep
+\vspace{0.15cm} 
+
+% \projectHeading{Ephemeral Chat App}{https://www.gregnavarro.com/web-development/ephemeral-chat-app/}{JavaScript, Node.js, React, Full-Stack Web App}
+% \begin{bullets}
+%     \item A  full-stack web application capable of connecting an arbitrary number of users in a real time chat room through utilization of a subscription-based communication model.\\
+%     \item Optimized through implementation of the Server Sent Events API, which uses a ‘kept-alive’ HTTP connection to reduce unnecessary network traffic and improve client response times. \\ 
+% \end{bullets}
+% \sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+
+% \verticalspacing  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \doubleItem{Languages:}{JavaScript, Python, Java, C++, C}{Databases:}{SQL, SQLite, MongoDB, NoSQL, SoQL, IndexedDB} \\
+    \doubleItem{Front-end Development:}{HTML, CSS, React, Gatsby, GraphQL }{Server-side Development:}{Node.js, AWS, GCP, Heroku} \\
+
+    \doubleItem {Version Control:}{Git}{Technology:}{Docker (Containerization), Virtualization} \\
+   \doubleItem{Methodologies:}{Responsive Design, UX/UI Design}{Design:}{Figma, Adobe Creative Suite}\\ 
+   
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem
+%     {Languages:}{JavaScript, Java, Python, C++, C}
+%     {Web Development:}{HTML, CSS, SASS, React, Node.js}
+%     \\
+%     \doubleItem
+%     {Databases:}{SQL, SQLite, MongoDB, NoSQL, SoQL, IndexedDB}
+%     {Technology:}{Git, Docker, JSON, XML, Webpack, Babel}
+% \end{skillList}%  \singleItem{Methodologies:}{Responsive \& User-Centered Design, Continuous Integration (CI/CD)} \\
+%  \doubleItem {Version Control:}{Git}{Technology:}{Docker (Containerization), Figma, Virtualization} \\
 \end{document}
